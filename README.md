@@ -62,5 +62,5 @@ Customer churn leads to revenue loss for businesses. Predicting churn allows the
  3. Consider hyperparameter tuning for Decision Tree or Random Forest to improve predictive performance.
 
 ## Conclusion
-This project demonstrates a complete end-to-end machine learning workflow for a real-world classification problem. The final selected model (Logistic Regression) can be used to predict and reduce customer churn, helping the comapny retain revenue and improve customer satisfaction.
+This project demonstrates a complete end-to-end machine learning workflow for a real-world classification problem. The final selected model (Logistic Regression) can be used to predict and reduce customer churn, helping the company retain revenue and improve customer satisfaction.
 
