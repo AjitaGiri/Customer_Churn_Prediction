@@ -15,7 +15,7 @@ Customer churn leads to revenue loss for businesses. Predicting churn allows the
 - Key Features: 
     - tenure: Number of months the customer stayed
     - MonthlyCharges: Amount billed monthly
-    - TotalChargs: Total amount billed
+    - TotalCharges: Total amount billed
     - Contract: Type of contract (Month-to-Month, One year, Two year)
     - SeniorCitizen: 0 or 1
     - Other categorical features: PaymentMethod, InternetService etc
@@ -32,7 +32,7 @@ Customer churn leads to revenue loss for businesses. Predicting churn allows the
   - Scaled numeric features using StandardScaler.
   - Encoded categorical variables:
     - Ordinal: Contract type using OrdinalEncoder
-    - Nominal: for output column Churn, used LabelEncoder and remaining nominal features using OneHotEncoder.
+    - Nominal: for output column Churn, used LabelEncoder and OneHotEncoder for remaining nominal features.
 
 3. Pipeline & ColumnTransformer
   - Used ColumnTransformer and Pipeline to streamline preprocessing.
@@ -44,8 +44,14 @@ Customer churn leads to revenue loss for businesses. Predicting churn allows the
       - Decision Tree
       - Random Forest
   - Evaluated models using Accuracy, Precision, Recall, ROC-AUC.
-  - Adressed class imbalance with class weighting
-  
+  - Addressed class imbalance using class_weight='balanced' 
+
+## Model Evaluation Summary
+Best Model: Logistic Regression
+- ROC-AUC ~0.84
+- Good balance between precision and recall
+- Preferred due to stability and interpretability
+
 ## Tools & Technologies
 - Python Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
 - ML Algorithms: LogisticRegression, Decision Tree, Random Forest
@@ -54,7 +60,7 @@ Customer churn leads to revenue loss for businesses. Predicting churn allows the
 # Key Insights:
  - Customers with month-to-month contracts are more likely to churn.
  - Higher monthly charges combined with low tenures increase churn probability.
- - Logistic Regression gave the best balance of precision and recall.
+ - Logistic Regression provided the best balance between precision and recall.
 
  ## Business Recommendations
  1. Target customers with month-to-month contracts for retention campaigns.
@@ -62,5 +68,5 @@ Customer churn leads to revenue loss for businesses. Predicting churn allows the
  3. Consider hyperparameter tuning for Decision Tree or Random Forest to improve predictive performance.
 
 ## Conclusion
-This project demonstrates a complete end-to-end machine learning workflow for a real-world classification problem. The final selected model (Logistic Regression) can be used to predict and reduce customer churn, helping the company retain revenue and improve customer satisfaction.
-
+This project demonstrates an end-to-end machine learning pipeline including data preprocessing, feature engineering, model building, evaluation, and interpretation. 
+Logistic Regression was selected as the final model due to its strong ROC-AUC score and balanced performance across precision and recall. The model can be used to identify customers at risk of churn and support business retention strategies.
