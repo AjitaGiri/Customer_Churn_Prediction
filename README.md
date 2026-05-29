@@ -70,7 +70,7 @@ Streamlit UI --> FastAPI --> ML Model --> Prediction Output
 - Model served using FastAPI
 - Endpoint : /predict
 - Hosted on Render
-- Live API: https://customer-churn-prediction-1sxg.onrender.com/predict
+- Base URL: https://customer-churn-prediction-1sxg.onrender.com
 
 ### Frontend (Streamlit)
 - User-friendly web interface
