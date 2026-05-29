@@ -1,7 +1,7 @@
-## End to end ML project on Customer Churn Prediction
+## Customer Churn Prediction - End to End ML Project
 
 ## Overview
-This project predicts whether a telecom customer will churn or stay based on demographic, service usage, and billing information. It demonstrates a complete machine learning workflow, including data preprocessing, feature engineering, model building, evaluation, and business insights.
+This project predicts whether a telecom customer will churn or stay based on demographic, service usage, and billing information. It demonstrates a complete machine learning pipeline from data preprocessing to deployment.
 
 ## Problem Statement
 Customer churn leads to revenue loss for businesses. Predicting churn allows the company to proactively retain customers through targeted strategies.
@@ -52,10 +52,31 @@ Best Model: Logistic Regression
 - Good balance between precision and recall
 - Preferred due to stability and interpretability
 
-## Tools & Technologies
-- Python Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
-- ML Algorithms: LogisticRegression, Decision Tree, Random Forest
-- Preprocessing: Pipeline, ColumnTransformer, FunctionTransformer
+## Project Architecture
+ 
+Streamlit UI --> FastAPI --> ML Model --> Prediction Output
+
+## Tech Stack
+- Python
+- Pandas, NumPy, Scikit-learn
+- Matplotlib, Seaborn
+- FastAPI (Backend API)
+- Streamlit (Frontend UI)
+- Render ( Backend deployment)
+- Streamlit Cloud (Frontend deployment)
+
+## Deployment
+### Backend
+- Model served using FastAPI
+- Endpoint : /predict
+- Hosted on Render
+- Live API: https://customer-churn-prediction-1sxg.onrender.com/predict
+
+### Frontend (Streamlit)
+- User-friendly web interface
+- Collects customer input and displays prediction
+- Connected to FastAPI backend
+- Live App: https://customerchurnprediction-8wwbskklzmhip6psor7z78.streamlit.app/
 
 # Key Insights:
  - Customers with month-to-month contracts are more likely to churn.
@@ -68,5 +89,5 @@ Best Model: Logistic Regression
  3. Consider hyperparameter tuning for Decision Tree or Random Forest to improve predictive performance.
 
 ## Conclusion
-This project demonstrates an end-to-end machine learning pipeline including data preprocessing, feature engineering, model building, evaluation, and interpretation. 
+This project demonstrates an end-to-end machine learning pipeline including data preprocessing, feature engineering, model building, evaluation, and deployment. 
 Logistic Regression was selected as the final model due to its strong ROC-AUC score and balanced performance across precision and recall. The model can be used to identify customers at risk of churn and support business retention strategies.
